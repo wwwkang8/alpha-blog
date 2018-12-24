@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to:'pages#about'
 
+  #article에 관한 모든 path를 제공한다.
+  resource :articles
+
 end
