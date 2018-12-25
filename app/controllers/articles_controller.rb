@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
   def index
     # 데이터베이스에서 모든 article을 가져온다.
     @articles = Article.all
-    return @articles.as_json
   end
 
   def new
@@ -37,6 +36,13 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Article was successfully deleted"
+    redirect_to articles_path
   end
   
   private
