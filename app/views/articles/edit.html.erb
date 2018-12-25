@@ -1,11 +1,11 @@
-<h1>Create an article</h1>
+<h1>Edit existing article</h1>
 
 <% if @article.errors.any? %>
   <h2>The following errors prevented article from getting created</h2>
   <ul>
-  <% @article.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
   </ul>
 <% end %>
 
@@ -24,6 +24,7 @@
   <p>
     <%= f.submit %>
   </p>
+  <p><%= link_to "Back to article listing", articles_path %></p>
+
 
 <% end %>
-<p><%= link_to "Back to article listing", articles_path %></p>
