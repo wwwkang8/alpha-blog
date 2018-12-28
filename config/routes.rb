@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   #article에 관한 모든 path를 제공한다.
   resources :articles
 
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
 end
