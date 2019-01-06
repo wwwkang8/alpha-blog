@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
+
   # Sign up을 누르면 new 라우팅으로 연결되어 new.html로 연결된다.
   # 하지만 @user = User.new를 왜 생성하는지 이유를 알 수 없다.
   # 왜냐하면 create에서도 @user를 사용하기 때문에 사실상 필요가 없는 생성이다.
