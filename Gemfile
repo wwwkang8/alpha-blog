@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -49,7 +49,7 @@ end
 
 group :production do
   #Postgre sql
-  gem 'pg'
+  gem 'pg', '~>1.1.3'
 
   #gem 'rails_12factor'
 end
@@ -70,3 +70,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'i18n', '~> 1.3.0'
+
+# 페이징을 할 수 있게 해주는 젬파일
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'

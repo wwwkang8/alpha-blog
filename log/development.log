@@ -1,0 +1,1857 @@
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:39:00 +0900
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('3569180485484816055', 0)[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateArticles (20181224134131)
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE `articles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `title` varchar(255))[0m
+  ↳ db/migrate/20181224134131_create_articles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (3.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181224134131')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddDescriptionToArticles (20181224143941)
+  [1m[35m (9.4ms)[0m  [1m[35mALTER TABLE `articles` ADD `description` text[0m
+  ↳ db/migrate/20181224143941_add_description_to_articles.rb:3
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE `articles` ADD `created_at` datetime[0m
+  ↳ db/migrate/20181224143941_add_description_to_articles.rb:4
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE `articles` ADD `updated_at` datetime[0m
+  ↳ db/migrate/20181224143941_add_description_to_articles.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181224143941')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUsers (20181225171509)
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `username` varchar(255), `email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20181225171509_create_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181225171509')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddUserIdToArticles (20181225180504)
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE `articles` ADD `user_id` int[0m
+  ↳ db/migrate/20181225180504_add_user_id_to_articles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181225180504')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddPasswordDigestToUsers (20181228010429)
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE `users` ADD `password_digest` varchar(255)[0m
+  ↳ db/migrate/20181228010429_add_password_digest_to_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20181228010429')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-01-09 10:39:26', '2019-01-09 10:39:26')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('3569180485484816055')[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:39:30 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3370ms (Views: 3361.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:43:10 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (3.5ms)
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 74.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:17 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:19 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:20 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:20 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:21 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:23 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:43:28 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 19:43:35 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (26.5ms)
+  Rendered articles/new.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 103ms (Views: 83.8ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 19:43:42 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7JR+BsGagDCtW/qEhZLXo8/pdQ1wPsyIkJj93x18KUV1bS5/QYDjXigarzrot/lZzgk1i7jJQNlnEh6PmYDPzw==", "article"=>{"title"=>"Hello world", "description"=>"Hello world"}, "commit"=>"Create Article"}
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:44:43 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 314ms (Views: 305.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:44:45 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:44:46 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (3.3ms)
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 54.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 19:44:48 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered articles/_form.html.erb (9.3ms)
+  Rendered articles/new.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 62.9ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 19:44:51 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dZ7ucU8V1LN99A3V0DbXACy2BdMZmpUK1fDipZALlsfsZ74Izw+33fi1WGu9E/n6LVZFVdFtGVsiegH1FPdwTQ==", "article"=>{"title"=>"asdf", "description"=>"asdf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/articles_controller.rb:16
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.7ms)
+  Rendered articles/_form.html.erb (5.5ms)
+  Rendered articles/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 82ms (Views: 55.1ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 19:44:57 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sT90mpNVligSHw6nACeFSJVkQYgG3JHTdnCt9ZdcbtiywsMGjQNhbS2bfYi4t0MSkbCfAYAfvnbsspAWAsJpyA==", "article"=>{"title"=>"asdfsdfasdfasdf", "description"=>"asdfasdfasdfasdf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/articles_controller.rb:16
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.1ms)
+  Rendered articles/_form.html.erb (4.6ms)
+  Rendered articles/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:45:12 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.5ms)
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:45:13 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.9ms)
+  Rendered articles/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:45:14 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.7ms)
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:46:38 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.1ms)
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:46:40 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 19:46:41 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2019-01-09 19:47:36 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/_form.html.erb (14.2ms)
+  Rendered users/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-09 19:47:51 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6YdqVNJo9qwpCC4Y2UTf9RppLfD4YUnF8yCxhF7UkBPqet3IzD4B6RaMXTdh1BmvHr3zeX6iZmBp4oxny0qXAw==", "user"=>{"username"=>"Jake", "email"=>"jeongho.kang@dramancompany.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`username` = 'Jake' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'jeongho.kang@dramancompany.com' LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`username`, `email`, `created_at`, `updated_at`, `password_digest`) VALUES ('Jake', 'jeongho.kang@dramancompany.com', '2019-01-09 10:47:51', '2019-01-09 10:47:51', '$2a$10$gx9v367Lmr8M2JjNUxgosuX3xfG/odM6wF3WiGjeMZMxPBYl05OKi')[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 111ms (ActiveRecord: 43.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:47:51 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.4ms)
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:48:02 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (1.1ms)
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 19:48:03 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-09 19:48:04 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-01-09 19:48:17 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UlEvKmsejMxqBKKzt8saBHOXj8qGXXsJBexHCV9DQFpRrJi2dUh7iVWA0ZwPW9xed0NRQwCeVKyfLnrqyt1HSg==", "session"=>{"email"=>"jeongho.kang@dramancompany.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'jeongho.kang@dramancompany.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users.1
+Completed 302 Found in 69ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users.1" for 127.0.0.1 at 2019-01-09 19:48:17 +0900
+Processing by UsersController#index as 
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered users/index.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 135.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 19:48:21 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (4.6ms)
+  Rendered articles/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 19:48:26 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVDnrQKabQJvni4DBxCrIBluqOg30+y4VawXZJNxAi0AqbfUgoAObOrfe71qNYXaGI7obv8kYOmiJvQ0F43kpw==", "article"=>{"title"=>"hello world", "description"=>"hello world"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('hello world', 'hello world', '2019-01-09 10:48:26', '2019-01-09 10:48:26', 1)[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2019-01-09 19:48:26 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:52
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 19:48:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (5.1ms)
+  Rendered articles/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 20:02:17 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE Article Load (0.0ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered articles/index.html.erb within layouts/application (231.0ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 8.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `will_paginate' for #<#<Class:0x007ffe11968680>:0x007ffe119382f0>):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: <div align="center">
+    4:   <%= will_paginate %>
+    5: </div>
+    6: 
+    7: <%= render 'article', obj: @articles %>
+  
+app/views/articles/index.html.erb:4:in `_app_views_articles_index_html_erb___2952516111109935583_70364596754000'
+Started POST "/__web_console/repl_sessions/7d3d269babfe171f06f49b99d12f99ee/trace" for 127.0.0.1 at 2019-01-09 20:03:01 +0900
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 20:09:22 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered articles/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Article::ActiveRecord_Relation:0x007fe6b636b7e0>):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: <div align="center">
+    4:   <%= will_paginate %>
+    5: </div>
+    6: 
+    7: <%= render 'article', obj: @articles %>
+  
+app/views/articles/index.html.erb:4:in `_app_views_articles_index_html_erb__3115745376287107879_70314438116180'
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:09:23 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:09:24 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 347ms (Views: 345.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 210ms (Views: 208.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:09:27 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 20:09:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered articles/index.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Article::ActiveRecord_Relation:0x007fe6b964b278>):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: <div align="center">
+    4:   <%= will_paginate %>
+    5: </div>
+    6: 
+    7: <%= render 'article', obj: @articles %>
+  
+app/views/articles/index.html.erb:4:in `_app_views_articles_index_html_erb__3115745376287107879_70314464792600'
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 20:09:28 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered articles/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Article::ActiveRecord_Relation:0x007fe6b9455d60>):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: <div align="center">
+    4:   <%= will_paginate %>
+    5: </div>
+    6: 
+    7: <%= render 'article', obj: @articles %>
+  
+app/views/articles/index.html.erb:4:in `_app_views_articles_index_html_erb__3115745376287107879_70314463753460'
+Started GET "/login" for 127.0.0.1 at 2019-01-09 20:13:46 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 265ms (Views: 257.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-09 20:13:47 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-01-09 20:13:58 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oPYshfk6JRiENxY8S9cisIwYvyvkM7tVDvy0KUTqFqmjC5sZ52zSXbuzZRPzR+TqiMxhomLwlPCUPonK0XQRuQ==", "session"=>{"email"=>"jeongho.kang@dramancompany.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'jeongho.kang@dramancompany.com' LIMIT 1[0m
+  ↳ app/controllers/sessions_controller.rb:9
+Redirected to http://localhost:3000/users.1
+Completed 302 Found in 85ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users.1" for 127.0.0.1 at 2019-01-09 20:13:58 +0900
+Processing by UsersController#index as 
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:3
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered users/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 136.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:14:02 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (5.7ms)
+  Rendered articles/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 61.9ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:14:10 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4rNP9oSh71855hDielhI0jEWh8dameTF2A3KoZ0vHnmc51GWgjk0/mmzf3kzE/ZSSQamdWd68Lg6tR6Aoha8w==", "article"=>{"title"=>"this is second article", "description"=>"hello guys"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('this is second article', 'hello guys', '2019-01-09 11:14:10', '2019-01-09 11:14:10', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (94.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 102ms (ActiveRecord: 95.1ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2019-01-09 20:14:10 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:14:12 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (4.5ms)
+  Rendered articles/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:14:24 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9xKGb20t13AvCIwTMb9jWiOTKOklOJtLpnIupw9QGmVu69YW7Te0HqpJ2a1cmk2gInNob+3PFxpR+M33i6z87w==", "article"=>{"title"=>"this is third article", "description"=>"hello guys this is jeongho"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('this is third article', 'hello guys this is jeongho', '2019-01-09 11:14:24', '2019-01-09 11:14:24', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (75.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 80ms (ActiveRecord: 76.5ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2019-01-09 20:14:24 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:14:25 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (4.7ms)
+  Rendered articles/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:14:43 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iHN8PAMkKrJBkmOjzxZY3YgJCFXXUccDySA/jfqxJWERiixFgz5J3MTTNh2iM3YnielI0x+mS1I+qtzdfk3D6w==", "article"=>{"title"=>"this is fourth article hehehe", "description"=>"thank you world that I can do my job that I like"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('this is fourth article hehehe', 'thank you world that I can do my job that I like', '2019-01-09 11:14:43', '2019-01-09 11:14:43', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (93.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 97ms (ActiveRecord: 93.6ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2019-01-09 20:14:43 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:14:44 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (5.4ms)
+  Rendered articles/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:14:57 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VrpnKuGOvBs65EsPWOi/+uM6qzmRSMVhR11zXvo1sD7PQzdTYZTfdb+lHrE1zZEA4trrv1m/STCw15AOfslWtA==", "article"=>{"title"=>"this is my fifth article", "description"=>"hello hello hello"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('this is my fifth article', 'hello hello hello', '2019-01-09 11:14:57', '2019-01-09 11:14:57', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 61ms (ActiveRecord: 57.1ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2019-01-09 20:14:57 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:14:58 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered articles/_form.html.erb (5.2ms)
+  Rendered articles/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:15:06 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFAhjPWvTVsUaqZJH+aqLUhIRyKP9sleWLcsaCW5WvotqXH1dbUuNZEr8/dyw4TXSagHpEcBRQ+vPc84oUW8cA==", "article"=>{"title"=>"this is my sixth article", "description"=>"asdfasdfasd"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('this is my sixth article', 'asdfasdfasd', '2019-01-09 11:15:06', '2019-01-09 11:15:06', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (56.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 61ms (ActiveRecord: 57.2ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2019-01-09 20:15:07 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:15:08 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (5.5ms)
+  Rendered articles/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:15:10 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Da5pea+AX/0NeK2sn7Fs8HF4+Y6tymwlCbjZ8kcEfi2UVzkAL5o8k4g5+BLylEIKcJi5CGU94HT+Mjqiw/iYpw==", "article"=>{"title"=>"asdfasdfasdf", "description"=>"asdfasdfasdf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('asdfasdfasdf', 'asdfasdfasdf', '2019-01-09 11:15:10', '2019-01-09 11:15:10', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/7
+Completed 302 Found in 35ms (ActiveRecord: 31.3ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2019-01-09 20:15:10 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:15:11 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered articles/_form.html.erb (5.3ms)
+  Rendered articles/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:15:15 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mUjqd/Ct6F7Yhy0tIbHq2EpfSoMf+6+A+lEYWHAbkbkAsboOcLeLMF3GeJNMlMQiS78KBdcMI9EN2/sI9Od3Mw==", "article"=>{"title"=>"asdfasdfsfesdfs", "description"=>"wefasdfawefa"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('asdfasdfsfesdfs', 'wefasdfawefa', '2019-01-09 11:15:15', '2019-01-09 11:15:15', 1)[0m
+  ↳ app/controllers/articles_controller.rb:17
+  [1m[35m (87.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:17
+Redirected to http://localhost:3000/articles/8
+Completed 302 Found in 92ms (ActiveRecord: 88.3ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-09 20:15:15 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:53
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2019-01-09 20:15:19 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles`[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (11.2ms)
+  Rendered articles/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2019-01-09 20:15:36 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 11[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendered articles/index.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 7.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<Article::ActiveRecord_Relation:0x007fcb1caacb18>):
+    1: <h1 align="center">Listing all articles</h1>
+    2: 
+    3: <div align="center">
+    4:   <%= will_paginate %>
+    5: </div>
+    6: 
+    7: <%= render 'article', obj: @articles %>
+  
+app/views/articles/index.html.erb:4:in `_app_views_articles_index_html_erb___1063008621093723861_70255167892980'
+Started GET "/articles/" for 127.0.0.1 at 2019-01-09 20:16:52 +0900
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (47.9ms)
+  Rendered articles/index.html.erb within layouts/application (55.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 334ms (Views: 308.3ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/articles?page=2" for 127.0.0.1 at 2019-01-09 20:16:54 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 5[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (7.8ms)
+  Rendered articles/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 86ms (Views: 82.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles?page=1" for 127.0.0.1 at 2019-01-09 20:16:56 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (11.2ms)
+  Rendered articles/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles?page=1" for 127.0.0.1 at 2019-01-09 20:19:03 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (49.4ms)
+  Rendered articles/index.html.erb within layouts/application (56.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 352ms (Views: 326.2ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:19:03 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (6.7ms)
+  Rendered articles/new.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:19:05 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users.1" for 127.0.0.1 at 2019-01-09 20:19:05 +0900
+Processing by UsersController#index as 
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 138ms (Views: 114.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 20:19:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:19:28 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (6.3ms)
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:24:14 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (16.0ms)
+  Rendered users/show.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 60.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:24:26 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (23.6ms)
+  Rendered users/show.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 331ms (Views: 286.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:24:49 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (10.9ms)
+  Rendered articles/new.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:24:56 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17l1XYVGTo7eZ7OpV7Kns9yWx/y1qfWpB6MLXzFbaI1OQCUkBVwt4Fsm5hc6l4lJ3XaHen1eefjwKegPtaeOBw==", "article"=>{"title"=>"hello hello klooe", "description"=>"dhfdfasdfasdf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('hello hello klooe', 'dhfdfasdfasdf', '2019-01-09 11:24:56', '2019-01-09 11:24:56', 1)[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (72.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles/9
+Completed 302 Found in 81ms (ActiveRecord: 73.9ms)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2019-01-09 20:24:56 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:52
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:25:00 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (6.1ms)
+  Rendered articles/new.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:25:02 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mF4EGa6d+iQeYOhBNOJXfIudGJQQMff9TaxRM3Zz8DQBp1RgLoeZSpshvf9Zx3mGin1YEtjGe6y6JrJj8o8Wvg==", "article"=>{"title"=>"asdfasdf", "description"=>"asdfasdfasdf"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('asdfasdf', 'asdfasdfasdf', '2019-01-09 11:25:02', '2019-01-09 11:25:02', 1)[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 35ms (ActiveRecord: 31.6ms)
+
+
+Started GET "/articles/10" for 127.0.0.1 at 2019-01-09 20:25:02 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:52
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-09 20:25:04 +0900
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered articles/_form.html.erb (5.9ms)
+  Rendered articles/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-09 20:25:07 +0900
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3JFA6NXnwBIuoih2h7oqx3w+h4vTwpZEj+d23xo+Tg5FaBCRVf2jfKvjfcjqnwQ9fd7HDRs1GhV4bZWPnsKohA==", "article"=>{"title"=>"212341234", "description"=>"12341234123"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO `articles` (`title`, `description`, `created_at`, `updated_at`, `user_id`) VALUES ('212341234', '12341234123', '2019-01-09 11:25:07', '2019-01-09 11:25:07', 1)[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (94.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles/11
+Completed 302 Found in 101ms (ActiveRecord: 95.6ms)
+
+
+Started GET "/articles/11" for 127.0.0.1 at 2019-01-09 20:25:07 +0900
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/articles_controller.rb:52
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/show.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/articles/show.html.erb:14
+  Rendered articles/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 20:25:13 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:25:15 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (5.5ms)
+  Rendered users/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:27:06 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:29:16 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (4.0ms)
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:33:31 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (4.4ms)
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-09 20:33:40 +0900
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (10.1ms)
+  Rendered articles/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles?page=2" for 127.0.0.1 at 2019-01-09 20:33:43 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 5[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (10.1ms)
+  Rendered articles/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles?page=3" for 127.0.0.1 at 2019-01-09 20:33:45 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 10[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered articles/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles?page=1" for 127.0.0.1 at 2019-01-09 20:33:47 +0900
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:20
+  Rendered articles/_article.html.erb (10.2ms)
+  Rendered articles/index.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 20:33:55 +0900
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 20:33:56 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 20:33:57 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/users/index.html.erb:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:33:58 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (5.1ms)
+  Rendered users/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 58.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:36:40 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (24.1ms)
+  Rendered users/show.html.erb within layouts/application (31.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 324ms (Views: 278.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:39:20 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (4.2ms)
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:41:35 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (5.4ms)
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 71.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-01-09 20:41:39 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/users_controller.rb:41:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:41:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (3.2ms)
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:41:42 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (4.2ms)
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-09 20:42:38 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (3.9ms)
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?page=2" for 127.0.0.1 at 2019-01-09 20:42:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"2", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 5[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (5.0ms)
+  Rendered users/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1?page=3" for 127.0.0.1 at 2019-01-09 20:42:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"3", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 10[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (3.6ms)
+  Rendered users/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 63.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1?page=1" for 127.0.0.1 at 2019-01-09 20:42:41 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"page"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:41
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `articles` WHERE `articles`.`user_id` = 1[0m
+  ↳ /Users/drama/.rvm/gems/ruby-2.3.3/gems/will_paginate-3.1.0/lib/will_paginate/active_record.rb:89
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 LIMIT 5 OFFSET 0[0m
+  ↳ app/views/articles/_article.html.erb:1
+  Rendered articles/_article.html.erb (6.5ms)
+  Rendered users/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 1.4ms)
+
+
