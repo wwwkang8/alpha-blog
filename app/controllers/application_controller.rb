@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # helper_method는 View에서도 메서드를 호출 가능하게 해준다.
   helper_method :current_user, :logged_in?
 
   def current_user
