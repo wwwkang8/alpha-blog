@@ -76,3 +76,7 @@ gem 'i18n', '~> 1.3.0'
 # 페이징을 할 수 있게 해주는 젬파일
 gem 'will_paginate', '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
+
+
+
+
