@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
     # @users = User.all
   end
+
+
 
   # Sign up을 누르면 new 라우팅으로 연결되어 new.html로 연결된다.
   # 하지만 @user = User.new를 왜 생성하는지 이유를 알 수 없다.
@@ -23,12 +26,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id]) # 변경할 유저 아이디로 유저 retrieve.
     render 'edit' # edit 템플릿으로 보내면 바로 @user와 같이 전송되는것 같다.
   end
 
   def update
-    @user = User.find(params[:id]) # 업데이트할 유저 반환.
     if @user.update(user_params)
       flash[:success] = "Your account updated successfully"
       redirect_to articles_path
@@ -38,13 +39,18 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
+
+
 
   private
     def user_params
       params.require(:user).permit(:username, :email, :password)
+    end
+
+    def set_user
+      @user = User.find(params[:id])
     end
 
 end
