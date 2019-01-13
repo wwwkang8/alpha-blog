@@ -19,8 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params) # UI로부터 받아온 이름, 이메일, 비밀번호를 받아서 인스턴스 생성
     if @user.save # 인스턴스를 DB에 저장
+      session[:user_id] = @user.id
       flash[:success] = "Welcome to the alpha blog #{@user.username}"
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render 'new' # DB 저장에 실패하여 user/new.html로 다시 리다이렉트
     end
