@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
+                                #ActionController::TestCase 레일즈 버전 5미만일 때
 
   # setup 메서드는 무엇일까? 왜 쓰는 것이지?
   def setup
@@ -11,7 +12,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get categories index" do
 
-    get :index  # get의 의미는 http메서드 get을 뜻한다.
+    #get :index  # get의 의미는 http메서드 get을 뜻한다.(레일즈 버전 5미만일 때 )
+    get categories_path
 
     assert_response :success # index를 가져오게 되면 success
 
@@ -19,7 +21,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get new" do
 
-    get :new
+    get new_category_path
 
     assert_response :success
 

@@ -32,5 +32,15 @@ class CategoryTest < ActiveSupport::TestCase
     assert_not @category.valid?
   end
 
+  test "이름이 스포츠여야 한다." do
+    assert 'sports' == @category.name
+  end
+
+  test "이름은 항상 존재해야한다." do
+    assert_not @category.name.blank?
+  end
+
+
+
 
 end

@@ -9,6 +9,7 @@
     </data-source>
     <data-source name="Rails alpha-blog: development" uuid="446f6e89-8316-4dc9-bb29-55c3dd0ef732">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <introspection-schemas>*:</introspection-schemas>
     </data-source>
   </component>
 </project>
